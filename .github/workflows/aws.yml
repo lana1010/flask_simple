@@ -68,7 +68,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}   
         
     - name: Copy Deployment package to S3 bucket
-      run : aws s3 cp ${{env.DEPLOY_PACKAGE_NAME}} s3://${{env.S3_BUCKET_NAME}}
+      run : aws s3 cp ${{env.DEPLOY_PACKAGE_NAME}} s3://${{env.S3_BUCKET_NAME}}/
       
     - name: Print log message
       run : echo "zip copied to S3 bucket successfully!"
